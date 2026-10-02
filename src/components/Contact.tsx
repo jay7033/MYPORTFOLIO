@@ -1,7 +1,9 @@
-import Section from './Section'
+ import Section from './Section'
+import Reveal from './Reveal'
+import ContactForm from './ContactForm'
 import { profile } from '../data/portfolio'
 
-const card = 'rounded-xl border border-slate-200 bg-white p-6 transition hover:border-indigo-600 hover:shadow-md'
+const card = 'block rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur transition hover:-translate-y-1 hover:border-accent/50'
 
 export default function Contact() {
   const items = [
@@ -12,15 +14,18 @@ export default function Contact() {
   ]
 
   return (
-    <Section id="contact" title="Contact" subtitle="Open to internships and collaborations. Let's talk.">
+    <Section id="contact" title="Let's work together" subtitle="Open to internships and collaborations. Let's talk." alt>
       <div className="grid gap-6 sm:grid-cols-2">
-        {items.map((i) => (
-          <a key={i.label} href={i.href} target="_blank" rel="noreferrer" className={card}>
-            <p className="text-sm text-slate-500">{i.label}</p>
-            <p className="mt-1 font-semibold text-indigo-600">{i.value}</p>
-          </a>
+        {items.map((i, idx) => (
+          <Reveal key={i.label} delay={idx * 0.08}>
+            <a href={i.href} target="_blank" rel="noreferrer" className={card}>
+              <p className="font-mono text-xs uppercase tracking-widest text-slate-500">{i.label}</p>
+              <p className="mt-2 font-semibold text-accent">{i.value}</p>
+            </a>
+          </Reveal>
         ))}
       </div>
+      <ContactForm />
     </Section>
   )
 }

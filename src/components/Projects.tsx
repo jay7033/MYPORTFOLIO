@@ -1,29 +1,33 @@
-import Section from './Section'
+ import Section from './Section'
+import Reveal from './Reveal'
 import { projects } from '../data/portfolio'
 
-const card = 'flex flex-col rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg'
-const tag = 'rounded bg-slate-100 px-2 py-1 text-xs font-medium text-slate-600'
-const linkPrimary = 'text-indigo-600 hover:underline'
-const linkSecondary = 'text-slate-700 hover:underline'
+const card = 'flex h-full flex-col rounded-xl border border-white/10 bg-white/5 p-7 backdrop-blur transition hover:-translate-y-1 hover:border-accent/50 hover:shadow-[0_0_40px_rgba(34,211,197,0.15)]'
+const tag = 'rounded border border-white/10 bg-white/5 px-2 py-1 font-mono text-xs text-slate-300'
+const linkA = 'text-accent hover:underline'
+const linkB = 'text-slate-300 hover:text-white'
 
 export default function Projects() {
   return (
-    <Section id="projects" title="Projects" subtitle="Some of the things I have built" alt>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((p) => (
-          <article key={p.title} className={card}>
-            <h3 className="text-xl font-semibold">{p.title}</h3>
-            <p className="mt-3 flex-1 text-slate-600">{p.description}</p>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {p.tech.map((t) => (
-                <span key={t} className={tag}>{t}</span>
-              ))}
-            </div>
-            <div className="mt-5 flex gap-4 text-sm font-semibold">
-              {p.live && <a href={p.live} target="_blank" rel="noreferrer" className={linkPrimary}>Live Demo ↗</a>}
-              {p.github && <a href={p.github} target="_blank" rel="noreferrer" className={linkSecondary}>GitHub ↗</a>}
-            </div>
-          </article>
+    <Section id="projects" title="Selected Work" subtitle="Projects where I applied AI and full-stack skills">
+      <div className="grid gap-6 lg:grid-cols-2">
+        {projects.map((p, i) => (
+          <Reveal key={p.title} delay={i * 0.1}>
+            <article className={card}>
+              <p className="font-mono text-xs text-accent">0{i + 1}</p>
+              <h3 className="mt-2 font-display text-2xl font-semibold text-white">{p.title}</h3>
+              <p className="mt-3 flex-1 text-slate-400">{p.description}</p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {p.tech.map((t) => (
+                  <span key={t} className={tag}>{t}</span>
+                ))}
+              </div>
+              <div className="mt-6 flex gap-5 text-sm font-semibold">
+                {p.live && <a href={p.live} target="_blank" rel="noreferrer" className={linkA}>Live Demo ↗</a>}
+                {p.github && <a href={p.github} target="_blank" rel="noreferrer" className={linkB}>GitHub ↗</a>}
+              </div>
+            </article>
+          </Reveal>
         ))}
       </div>
     </Section>
