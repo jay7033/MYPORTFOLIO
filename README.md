@@ -1,32 +1,59 @@
-# React + TypeScript + Vite
+ # Jay Kumar Mishra | Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern, responsive developer portfolio showcasing my projects, skills, experience, certifications and coding profiles.
 
-Currently, two official plugins are available:
+**Live Demo:** https://your-vercel-link.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Dark, futuristic UI with animated hero section
+- Smooth scroll animations using Framer Motion
+- Sections: About, Skills, Coding Profiles, Projects, Journey, Credentials, Contact
+- Working contact form (messages are delivered to my email via Formspree)
+- Fully responsive for mobile, tablet and desktop
+- All content managed from a single data file
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the Oxlint configuration
+- React
+- TypeScript
+- Tailwind CSS
+- Vite
+- Framer Motion
+- Formspree
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Featured Projects
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+- **AgroVision AI**: AI-powered crop advisory system built with Python and Machine Learning.
+- **FarmDirect**: AI-powered farmer-to-buyer marketplace built with React, Supabase and PostgreSQL.
+
+## Getting Started
+
+```bash
+git clone https://github.com/jay7033/MYPORTFOLIO.git
+cd MYPORTFOLIO
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Open the local link shown in the terminal (usually `http://localhost:5173`).
+
+## Build for Production
+
+```bash
+npm run build
+```
+
+## Customize
+
+All portfolio content (profile, skills, projects, experience, certificates) lives in `src/data/portfolio.ts`. Edit that file to update the site.
+
+## Contact
+
+- Email: mjay37028@gmail.com
+- GitHub: https://github.com/jay7033
+- LinkedIn: add your LinkedIn link here
+
+## License
+
+This project is for personal portfolio use.
