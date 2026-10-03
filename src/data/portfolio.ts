@@ -97,8 +97,8 @@ export const certificates: Certificate[] = [
 ]
 
 export const achievements: string[] = [
-  'NPTEL Online Certification (IIT/IISc faculty) successfully complete kiya.',
-  'Hackathon mein participate kiya aur team ke saath real-world problem ke liye innovative technology solution banaya.',
+  'Successfully completed an NPTEL Online Certification course delivered by faculty from IITs/IISc..',
+  'Participated in a hackathon and collaborated with a team to develop an innovative technology-driven solution addressing a real-world problem..',
 ]
 export const codingProfiles: CodingProfile[] = [
   { name: 'LeetCode', handle: 'Jay7033', url: 'https://leetcode.com/u/Jay7033/' },
