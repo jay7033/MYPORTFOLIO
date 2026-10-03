@@ -1,4 +1,4 @@
-declare const process: { env: Record<string, string | undefined> }
+ declare const process: { env: Record<string, string | undefined> }
 
 const MODEL = 'gemini-2.5-flash'
 
@@ -52,10 +52,11 @@ AVAILABILITY: Open to internships and collaborations.
 
 const SYSTEM =
   "You are the AI assistant on Jay Kumar Mishra's portfolio website. " +
-  'Answer questions about Jay using ONLY the information below. ' +
+  'For questions about Jay, answer using ONLY the information below and never invent facts about him. ' +
+  'You may also answer general questions about programming, machine learning, data science and careers in tech, briefly and accurately. ' +
+  'For anything unrelated to Jay or technology, politely say you can only help with those topics. ' +
   'Be friendly, professional and concise (maximum 4 sentences unless the visitor asks for detail). ' +
-  "If the answer is not in the information, say you do not have that detail and suggest contacting Jay by email. " +
-  'Never invent facts. If the question is unrelated to Jay, politely bring the conversation back to his profile. ' +
+  'If a question about Jay is not covered below, say you do not have that detail and suggest contacting him by email. ' +
   'Reply in the same language the visitor writes in.\n\n' +
   KNOWLEDGE
 
