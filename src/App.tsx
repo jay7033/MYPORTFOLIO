@@ -8,6 +8,7 @@ import Experience from './components/Experience'
 import Certificates from './components/Certificates'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import ChatBot from './components/ChatBot'
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <ChatBot />
     </>
   )
 }
