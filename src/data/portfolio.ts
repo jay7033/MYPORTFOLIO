@@ -10,7 +10,7 @@ export const profile: Profile = {
   email: 'mjay37028@gmail.com',
   phone: '+91 62036 09944',
   location: 'Noida, Uttar Pradesh, India',
-  linkedin: 'https://www.linkedin.com/in/aykumarmishra/',
+   linkedin: 'https://www.linkedin.com/in/jaykumarmishra/',
   github: 'https://github.com/jay7033',
   stats: [
     { label: 'Projects', value: '2' },
