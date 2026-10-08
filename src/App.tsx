@@ -1,4 +1,5 @@
- import ScrollProgress from './components/ScrollProgress'
+ import VoiceIntro from './components/VoiceIntro'
+import ScrollProgress from './components/ScrollProgress'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import TechMarquee from './components/TechMarquee'
@@ -16,6 +17,7 @@ import ChatBot from './components/ChatBot'
 export default function App() {
   return (
     <>
+      <VoiceIntro />
       <ScrollProgress />
       <Navbar />
       <main>
