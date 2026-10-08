@@ -20,7 +20,7 @@ const services: Service[] = [
   {
     title: 'Full StackWeb Development',
     text: 'Creating fast, responsive and clean web applications with modern frontend tools and cloud databases.',
-    tags: ['React', 'Tailwind CSS', 'Supabase', 'html', 'css', 'javascript', 'typescript', 'next.js', 'node.js',],
+    tags: ['React', 'Tailwind CSS', 'Supabase', 'html', 'css', 'javascript', 'typescript', 'next.js', 'node.js', 'spring boot'],
     icon: <FaCode />,
   },
   {
